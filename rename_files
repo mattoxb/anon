@@ -1,0 +1,7 @@
+cd $1
+echo $1
+for i in *; do
+    nu=$(echo $i | sed 's/.*_//')
+    mv $i $nu
+done
+

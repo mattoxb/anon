@@ -1,0 +1,8 @@
+for i in $*; do
+   netid=$(echo $i | sed 's/@.*//')
+   anon=$(anon $netid)
+   echo netid is $netid, anon is $anon
+   mv $i $anon
+   # rename_files $anon
+   # sed -i 's/@author.*/@author anonymized/' $anon/*
+done
